@@ -1,0 +1,19 @@
+index:
+    resource: "@IndexBundle/Resources/config/routing.yml"
+    prefix:   /
+
+abonnement:
+    resource: "@AbonnementBundle/Resources/config/routing.yml"
+    prefix:   /
+
+reservation:
+    resource: "@ReservationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+agence:
+    resource: "@AgenceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+parc_auto:
+    resource: "@parcAutoBundle/Resources/config/routing.yml"
+    prefix:   /
