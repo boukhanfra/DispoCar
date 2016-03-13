@@ -15,11 +15,11 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-        	new parcAutoBundle\parcAutoBundle(),
-            new AgenceBundle\AgenceBundle(),
-            new ReservationBundle\ReservationBundle(),
-            new AbonnementBundle\AbonnementBundle(),
-            new IndexBundle\IndexBundle(),
+        	new DispoCar\ParcAutoBundle\ParcAutoBundle(),
+            new DispoCar\AgenceBundle\AgenceBundle(),
+            new DispoCar\ReservationBundle\ReservationBundle(),
+            new DispoCar\AbonnementBundle\AbonnementBundle(),
+            new DispoCar\IndexBundle\IndexBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

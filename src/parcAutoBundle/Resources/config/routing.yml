@@ -1,3 +1,0 @@
-parc_auto_homepage:
-    path:     /
-    defaults: { _controller: parcAutoBundle:Default:index }

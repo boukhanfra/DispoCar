@@ -15,5 +15,5 @@ agence:
     prefix:   /
 
 parc_auto:
-    resource: "@parcAutoBundle/Resources/config/routing.yml"
+    resource: "@ParcAutoBundle/Resources/config/routing.yml"
     prefix:   /

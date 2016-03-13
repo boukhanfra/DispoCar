@@ -2,7 +2,7 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
-    - { resource: "@parcAutoBundle/Resources/config/services.yml" }
+    - { resource: "@ParcAutoBundle/Resources/config/services.yml" }
     - { resource: "@AgenceBundle/Resources/config/services.yml" }
     - { resource: "@ReservationBundle/Resources/config/services.yml" }
     - { resource: "@AbonnementBundle/Resources/config/services.yml" }
