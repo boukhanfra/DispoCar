@@ -60,7 +60,14 @@ class Client
      * @ORM\Column(name="fixe", type="string", length=255, nullable=true)
      */
     private $fixe;
-    
+
+
+    /**
+     * @var Reservation
+     * @ORM\OneToMany(targetEntity="DispoCar\ReservationBundle\Entity\Reservation",mappedBy="client")
+     *
+     */
+    private $reservations;
 
     /**
      * Get id
@@ -144,5 +151,93 @@ class Client
     {
         return $this->adresse;
     }
-}
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->reservations = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
+    /**
+     * Set mobile
+     *
+     * @param string $mobile
+     *
+     * @return Client
+     */
+    public function setMobile($mobile)
+    {
+        $this->mobile = $mobile;
+
+        return $this;
+    }
+
+    /**
+     * Get mobile
+     *
+     * @return string
+     */
+    public function getMobile()
+    {
+        return $this->mobile;
+    }
+
+    /**
+     * Set fixe
+     *
+     * @param string $fixe
+     *
+     * @return Client
+     */
+    public function setFixe($fixe)
+    {
+        $this->fixe = $fixe;
+
+        return $this;
+    }
+
+    /**
+     * Get fixe
+     *
+     * @return string
+     */
+    public function getFixe()
+    {
+        return $this->fixe;
+    }
+
+    /**
+     * Add reservation
+     *
+     * @param \DispoCar\ReservationBundle\Entity\Reservation $reservation
+     *
+     * @return Client
+     */
+    public function addReservation(\DispoCar\ReservationBundle\Entity\Reservation $reservation)
+    {
+        $this->reservations[] = $reservation;
+
+        return $this;
+    }
+
+    /**
+     * Remove reservation
+     *
+     * @param \DispoCar\ReservationBundle\Entity\Reservation $reservation
+     */
+    public function removeReservation(\DispoCar\ReservationBundle\Entity\Reservation $reservation)
+    {
+        $this->reservations->removeElement($reservation);
+    }
+
+    /**
+     * Get reservations
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReservations()
+    {
+        return $this->reservations;
+    }
+}

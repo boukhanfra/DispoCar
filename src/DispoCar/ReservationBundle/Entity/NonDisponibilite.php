@@ -3,14 +3,15 @@
 namespace DispoCar\ReservationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use DispoCar\ParcAutoBundle\Entity\Vehicule;
 
 /**
  * Nondispo
  *
  * @ORM\Table(name="nondispo")
- * @ORM\Entity(repositoryClass="DispoCar\ReservationBundle\Repository\NondispoRepository")
+ * @ORM\Entity(repositoryClass="DispoCar\ReservationBundle\Repository\NonDisponibiliteRepository")
  */
-class Nondispo
+class NonDisponibilite
 {
     /**
      * @var int
@@ -44,6 +45,40 @@ class Nondispo
 
 
     /**
+     * @var \DateTime
+     * @ORM\Column(name="created_on",type="datetime")
+     */
+    private $createdOn;
+
+
+    /**
+     * @var string
+     * @ORM\Column(name="created_by",type="string")
+     */
+    private $createdBy;
+
+    /**
+     * @var \DateTime
+     * @ORM\Column(name="updated_on",type="datetime")
+     */
+    private $updatedOn;
+
+
+    /**
+     * @var string
+     * @ORM\Column(name="updated_by",type="string")
+     */
+    private $updatedBy;
+
+
+    /**
+     * @var Vehicule
+     * @ORM\ManyToOne(targetEntity="DispoCar\ParcAutoBundle\Entity\Vehicule",inversedBy="nonDisponibilites")
+     * @ORM\JoinColumn(name="vehicule_id",referencedColumnName="id")
+     */
+    private $vehicule;
+
+    /**
      * Get id
      *
      * @return int
@@ -58,13 +93,11 @@ class Nondispo
      *
      * @param boolean $dispo
      *
-     * @return Nondispo
      */
     public function setDispo($dispo)
     {
         $this->dispo = $dispo;
 
-        return $this;
     }
 
     /**
@@ -124,5 +157,124 @@ class Nondispo
     {
         return $this->dateFin;
     }
-}
 
+    /**
+     * Set createdOn
+     *
+     * @param \DateTime $createdOn
+     *
+     * @return NonDisponibilite
+     */
+    public function setCreatedOn($createdOn)
+    {
+        $this->createdOn = $createdOn;
+
+        return $this;
+    }
+
+    /**
+     * Get createdOn
+     *
+     * @return \DateTime
+     */
+    public function getCreatedOn()
+    {
+        return $this->createdOn;
+    }
+
+    /**
+     * Set createdBy
+     *
+     * @param string $createdBy
+     *
+     * @return NonDisponibilite
+     */
+    public function setCreatedBy($createdBy)
+    {
+        $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    /**
+     * Get createdBy
+     *
+     * @return string
+     */
+    public function getCreatedBy()
+    {
+        return $this->createdBy;
+    }
+
+    /**
+     * Set updatedOn
+     *
+     * @param \DateTime $updatedOn
+     *
+     * @return NonDisponibilite
+     */
+    public function setUpdatedOn($updatedOn)
+    {
+        $this->updatedOn = $updatedOn;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedOn
+     *
+     * @return \DateTime
+     */
+    public function getUpdatedOn()
+    {
+        return $this->updatedOn;
+    }
+
+    /**
+     * Set updatedBy
+     *
+     * @param string $updatedBy
+     *
+     * @return NonDisponibilite
+     */
+    public function setUpdatedBy($updatedBy)
+    {
+        $this->updatedBy = $updatedBy;
+
+        return $this;
+    }
+
+    /**
+     * Get updatedBy
+     *
+     * @return string
+     */
+    public function getUpdatedBy()
+    {
+        return $this->updatedBy;
+    }
+
+    /**
+     * Set vehicule
+     *
+     * @param \DispoCar\ParcAutoBundle\Entity\Vehicule $vehicule
+     *
+     * @return NonDisponibilite
+     */
+    public function setVehicule(\DispoCar\ParcAutoBundle\Entity\Vehicule $vehicule = null)
+    {
+        $this->vehicule = $vehicule;
+
+        return $this;
+    }
+
+    /**
+     * Get vehicule
+     *
+     * @return \DispoCar\ParcAutoBundle\Entity\Vehicule
+     */
+    public function getVehicule()
+    {
+        return $this->vehicule;
+    }
+}

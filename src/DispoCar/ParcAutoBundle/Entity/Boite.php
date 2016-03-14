@@ -65,4 +65,3 @@ class Boite
         return $this->type;
     }
 }
-

@@ -168,4 +168,3 @@ class Presentation
         return $this->banner;
     }
 }
-
