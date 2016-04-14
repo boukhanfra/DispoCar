@@ -15,8 +15,7 @@ class Reglement
 
     /**
      * @var int
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     *
      * @ORM\Column(name="idReglement", type="integer")
      */
     private $id;
@@ -44,14 +43,6 @@ class Reglement
 
 
     /**
-     * @var Abonnement
-     * @ORM\ManyToOne(targetEntity="DispoCar\AbonnementBundle\Entity\Abonnement",inversedBy="regelements")
-     * @ORM\JoinColumn(name="abonnement_id",referencedColumnName="id")
-     */
-    private $abonnement;
-
-
-    /**
      * Get id
      *
      * @return int
@@ -61,6 +52,16 @@ class Reglement
         return $this->id;
     }
 
+
+    /**
+     * Get idReglement
+     *
+     * @return int
+     */
+    public function getIdReglement()
+    {
+        return $this->id;
+    }
 
     /**
      * Set datePaiement
@@ -133,42 +134,5 @@ class Reglement
     {
         return $this->solde;
     }
-
-    /**
-     * Set id
-     *
-     * @param integer $id
-     *
-     * @return Reglement
-     */
-    public function setId($id)
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
-    /**
-     * Set abonnement
-     *
-     * @param \DispoCar\AbonnementBundle\Entity\Abonnement $abonnement
-     *
-     * @return Reglement
-     */
-    public function setAbonnement(\DispoCar\AbonnementBundle\Entity\Abonnement $abonnement = null)
-    {
-        $this->abonnement = $abonnement;
-
-        return $this;
-    }
-
-    /**
-     * Get abonnement
-     *
-     * @return \DispoCar\AbonnementBundle\Entity\Abonnement
-     */
-    public function getAbonnement()
-    {
-        return $this->abonnement;
-    }
 }
+

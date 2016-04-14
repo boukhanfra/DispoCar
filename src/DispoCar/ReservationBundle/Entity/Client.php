@@ -61,14 +61,7 @@ class Client
      * @ORM\Column(name="fixe", type="string", length=255, nullable=true)
      */
     private $fixe;
-
-
-    /**
-     * @var Reservation
-     * @ORM\OneToMany(targetEntity="DispoCar\ReservationBundle\Entity\Reservation",mappedBy="client")
-     *
-     */
-    private $reservations;
+    
 
     /**
      * Get id
@@ -152,6 +145,7 @@ class Client
     {
         return $this->adresse;
     }
+
     /**
      * Constructor
      */
@@ -242,3 +236,4 @@ class Client
         return $this->reservations;
     }
 }
+

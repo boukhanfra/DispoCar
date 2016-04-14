@@ -38,13 +38,6 @@ class Ads
 
 
     /**
-     * @var Agence
-     * @ORM\ManyToOne(targetEntity="DispoCar\AgenceBundle\Entity\Agence",inversedBy="ads")
-     * @ORM\JoinColumn(name="agence_id",referencedColumnName="id")
-     */
-    private $agence;
-
-    /**
      * Get id
      *
      * @return int
@@ -97,28 +90,5 @@ class Ads
 		return $this;
 	}
 	
-
-    /**
-     * Set agence
-     *
-     * @param \DispoCar\AgenceBundle\Entity\Agence $agence
-     *
-     * @return Ads
-     */
-    public function setAgence(\DispoCar\AgenceBundle\Entity\Agence $agence = null)
-    {
-        $this->agence = $agence;
-
-        return $this;
-    }
-
-    /**
-     * Get agence
-     *
-     * @return \DispoCar\AgenceBundle\Entity\Agence
-     */
-    public function getAgence()
-    {
-        return $this->agence;
-    }
 }
+

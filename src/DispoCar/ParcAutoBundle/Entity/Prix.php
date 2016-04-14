@@ -156,3 +156,4 @@ class Prix
         return $this->tresLongueDuree;
     }
 }
+

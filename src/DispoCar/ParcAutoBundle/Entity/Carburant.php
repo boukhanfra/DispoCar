@@ -1,6 +1,6 @@
 <?php
 
-namespace DispoCar\ParcAutoBundle\Entity;
+namespace parcAutoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -64,3 +64,4 @@ class Carburant
         return $this->type;
     }
 }
+

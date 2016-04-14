@@ -1,0 +1,122 @@
+{% extends 'IndexBundle:common:base.html.twig' %}
+{% block contenu %}
+    <div class="row">
+        <div class="col-md-4 RechercherCar" style="margin-top: -40px">
+<h3>Rechercher une location de voiture</h3>
+<div class="jumbotron" style="padding: 10px">
+            <form class="form-horizontal">
+                <fieldset>
+
+                    <div class="form-group">
+                        <div class="col-md-12"> <label class="control-label" for="focusedInput">Date  et heure de prise en charge</label></div>
+                        <div class="col-md-5"><input class="form-control" id="focusedInput" value="" type="text"></div>
+                        <div class="col-md-2"> <label class="control-label" for="focusedInput">Heure:</label></div>
+                        <div class="col-md-4"><input class="form-control" id="focusedInput" value="" type="text"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-12"> <label class="control-label" for="focusedInput">Date  et heure de restitution</label></div>
+                        <div class="col-md-5"><input class="form-control" id="focusedInput" value="" type="text"></div>
+                        <div class="col-md-2"> <label class="control-label" for="focusedInput">Heure:</label></div>
+                        <div class="col-md-4"><input class="form-control" id="focusedInput" value="" type="text"></div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12"> <label class="control-label" for="focusedInput">Lieu de prise en charge</label></div>
+                        <div class="col-md-10"> <input class="form-control" id="focusedInput" value="Aeroport, Gare Rabat Agdal..." type="text"></div>
+                    </div>
+
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Restitution au même endroit
+                        </label>
+                    </div>
+                    <div class="row"> <br/></div>
+                    <div class="form-group">
+                        <div class="col-md-10 col-md-offset-2">
+                            <button type="reset" class="btn btn-default">Anuller</button>
+                            <button type="submit" class="col-md-offset-1 btn btn-primary">Rechercher</button>
+                        </div>
+                    </div>
+
+                    </fieldset>
+                </form>
+</div>
+        </div>
+
+
+        <div class="col-md-4 TopCars" style="margin-top: -40px">
+            <h3>Top 10 voitures de location</h3>
+<table>
+ <tr>
+         <td> <img src="{{ asset('bundles/index/images/clio.jpg') }}"
+                class="img-responsive" width="230" title="range"/> </td>
+         <td class="text-muted">
+             <span class="text-danger gras">29 €</span>
+           <br/>  Diesel <br/>Climatisé<br/> Automatique
+         </td>
+ </tr>
+
+    <tr>
+        <td>    <img src="{{ asset('bundles/index/images/duster.jpg') }}"
+                 class="img-responsive" width="230" title="duster"/> </td>
+        <td class="text-muted">
+            <span class="text-danger gras">35 €</span>
+            <br/>Diesel <br/>Climatisé<br/> Manuel
+
+        </td>
+    </tr>
+
+    <tr>
+          <td>  <img src="{{ asset('bundles/index/images/logan.jpg') }}"
+                 class="img-responsive" width="230" title="logan"/> </td>
+          <td class="text-muted">
+              <span class="text-danger gras">31 €</span>
+              <br/>Essense <br/>Non Climatisé<br/> Manuel
+          </td>
+    </tr>
+</table>
+        </div>
+
+
+        <div class="col-md-4 5raisons">
+            <h4 class="text-warning"> Cinq raisons afin d'opter pour bookingCar.ma :</h4>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <span class="badge">1</span>
+                   Vous louez le moins cher au Maroc
+                </li>
+                <li class="list-group-item">
+                    Vous trouverez toujours une voiture disponible
+                    <span class="badge">2</span>
+
+                </li>
+                <li class="list-group-item">
+
+                    <span class="badge">3</span>
+                   Vous reservez en quelques simples cliques
+                </li>
+                <li class="list-group-item">
+
+                    <span class="badge">4</span>
+                Plus de 5000 voitures de catégorie différente
+                </li>
+                <li class="list-group-item">
+
+                    <span class="badge">5</span>
+                    Comparez et choisissez le meilleur service
+                </li>
+            </ul>
+
+            <div class="alert alert-dismissible" style="background-color: #c3c3c3">
+                <button type="button" class="close" data-dismiss="alert">x</button>
+                <strong>Espace PUB !</strong> <a href="#" class="alert-link">
+                    </a>
+                <br/>
+                Espace Publicité Spécial Agence de location
+                <br/><br/> <br/><br/> <br/><br/>
+            </div>
+        </div>
+    </div>
+
+  {% endblock %}

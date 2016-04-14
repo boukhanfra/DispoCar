@@ -1,3 +1,7 @@
-agence_homepage:
-    path:     /
-    defaults: { _controller: AgenceBundle:Default:index }
+agence_presentation:
+    path:     /agence
+    defaults: { _controller: AgenceBundle:Agence:agence }
+agence_ajout_vehicule:
+    path:     /ajoutVehicule
+    defaults: { _controller: AgenceBundle:Agence:ajoutVehicule }
+

@@ -1,0 +1,96 @@
+{% extends 'IndexBundle:common:base.html.twig' %}
+{% block contenu %}
+    <div style="min-height: 600px">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Agences de location</a></li>
+                <li class="active">Rangtour</li>
+            </ul>
+        </div>
+        <div  class="col-md-2 col-md-offset-5"> <img src="{{ asset('bundles/agence/images/rangtourlogo.png') }}" style="border-radius: 20px;width: 190px" alt="BookingCar" class="img-responsive" title="BookingCar.ma"/></div>
+
+    </div>
+    <ul class="nav nav-tabs">
+        <li class=""><a aria-expanded="true" href="#home" data-toggle="tab">Rangtour</a></li>
+        <li class="active"><a aria-expanded="false" href="#parcauto" data-toggle="tab">Parc auto</a></li>
+        <li class=""><a aria-expanded="false" href="#motdirecteur" data-toggle="tab">Mot du directeur</a></li>
+        <li class=""><a aria-expanded="false" href="#nouscontacter" data-toggle="tab">Nous-contacter</a></li>
+    </ul>
+    <div id="myTabContent" class="tab-content col-md-9">
+        <div class="tab-pane fade" id="home">
+            <div  style="text-align: justify" >
+            <h2>Présentation</h2>
+           <p> RANGTOUR est une agence de location de voiture à Rabat spécialisée dans la location de voitures à usage personnel, professionnel et touristique.
+
+            RANGTOUR dispose de modalité simple, flexible et rapide pour vous livrer votre voiture choisis dans les meilleurs délais dans les villes de Rabat, Sale, Casablanca et Marrakech.
+
+            la qualité de notre service, l’amabilité de nos agents et le bon état de nos voitures sont les atouts qui nous distinguent.
+           </p>
+                <h2> Nos Atouts</h2>
+                <p>
+
+                    Avec Rangtour, bénéficiez de prix avantageux pour votre location de voiture à prix réduit : cartes de réduction, programme de fidélité et offres spéciales ou offre week-end. Toute l’année, Rangtour vous propose des tarifs préférentiels sur une flotte de véhicules éco-citoyens récents.
+
+                    Rangtour vous propose les meilleurs tarifs de location de voiture grâce à ses offres exclusives nous disposons d’un grand choix de voitures de location (citadine, compacte, monospace, Prestige), des offres de location de voiture pas cher pour les lignes touristiques, aussi la livraison est gratuite au niveau de l’aéroport de Rabat et de Casablanca mohammed 5.
+
+                    Nous proposons des offres de location de voitures semestrielles ou annuelles au profit des entreprises et des sociétés installées dans toutes les villes du Royaume.
+                </p>
+                </div>
+        </div>
+        <div class="tab-pane fade active in" id="parcauto">
+                <div class="col-md-12" style="padding:0;" >
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <span class="grascolor">60 voitures de loaction correspondantes à votre recherche...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 panel panel-standard" >
+                    <div class="col-md-12"> <span class="grasform">Dacia logan 2016</span> <span class="smallGray">ou équivalant</span></div>
+                    <div class="col-md-3"> <img src="{{ asset('bundles/index/images/logan.jpg') }}" class="img-responsive" width="200" title="logan"/> </div>
+                    <div class="col-md-3">    <br/>Essense <br/>Non Climatisé<br/> Manuel </div>
+                    <div class="col-md-3"> <b>Agence Rangtour</b><br> Hay Riad sect 15 bloc N<br>05 37 90 87 32 </div>
+                    <div class="col-md-3"><div class="price-panel">
+                            <span class="price">31 €/Jour</span><br/> Total: 90 € <br/><br/>
+                            <button type="submit" class="btn btn-primary btn-lg col-md-12">Reservez</button>
+                        </div> </div>
+                </div>
+
+                <div class="col-md-12 panel panel-standard" >
+                    <div class="col-md-12"> <span class="grasform">Renault Clio 2015</span> <span class="smallGray">ou équivalant</span></div>
+                    <div class="col-md-3"> <img src="{{ asset('bundles/index/images/clio.jpg') }}" class="img-responsive" width="200" title="logan"/> </div>
+                    <div class="col-md-3">    <br/>Essense <br/>Non Climatisé<br/> Manuel </div>
+                    <div class="col-md-3"> <b>Agence Rabat Car Tour</b><br> Hay Riad sect 15 bloc N<br>05 37 90 87 32 </div>
+                    <div class="col-md-3"><div class="price-panel">
+                            <span class="price">53 €/Jour</span><br/> Total: 112 € <br/><br/>
+                            <button type="submit" class="btn btn-primary btn-lg col-md-12">Reservez</button>
+                        </div> </div>
+                </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="motdirecteur">
+            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork.</p>
+        </div>
+        <div class="tab-pane fade" id="nouscontacter">
+            <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater.</p>
+        </div>
+    </div>
+
+        <div class="col-md-3">
+            <h3>Oû nous-trouvez ? </h3>
+            <iframe width="100%" height="280px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=34.058939,-6.792581&amp;spn=56.506174,79.013672&amp;t=m&z=14&amp;output=embed"></iframe>
+           <p> <abbr title="Phone"></abbr> Tél : (+212) 5 37 86 20 80</p>
+           <p> <abbr title="Phone"></abbr> Fax : (+212) 5 37 85 23 05</p>
+           <p>  <i class="fa fa-envelope-o"></i>
+                Email: <a href="mailto:info@rangtour.ma"> info@rangtour.ma</a></p>
+            <p> Lundi - Samedi: 8H  - 17H:30</p>
+
+        </div>
+
+
+    </div>
+  {% endblock %}
