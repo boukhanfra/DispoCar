@@ -2,10 +2,8 @@
 
 namespace DispoCar\AgenceBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use DispoCar\ParcAutoBundle\Entity\Vehicule;
-use DispoCar\AbonnementBundle\Entity\Abonnement;
+
 /**
  * Agence
  *
@@ -102,40 +100,6 @@ class Agence
 
 
     /**
-     * @var Vehicule
-     * @ORM\OneToMany(targetEntity="DispoCar\ParcAutoBundle\Entity\Vehicule",mappedBy="agence")
-     */
-    private $vehicules;
-
-    /**
-     * @var Ads
-     * @ORM\OneToMany(targetEntity="DispoCar\AgenceBundle\Entity\Ads", mappedBy="agence")
-     */
-    private $ads;
-
-    /**
-     * @var Presentation
-     * @ORM\OneToOne(targetEntity="DispoCar\AgenceBundle\Entity\Presentation")
-     * @ORM\JoinColumn(name="presentation_id",referencedColumnName="id")
-     */
-    private $presentation;
-
-
-    /**
-     * @var PointLocation
-     * @ORM\OneToMany(targetEntity="DispoCar\AgenceBundle\Entity\PointLocation",mappedBy="agence")
-     */
-    private $pointsLocation;
-
-    /**
-     * @var Abonnement
-     * @ORM\OneToOne(targetEntity="DispoCar\AbonnementBundle\Entity\Abonnement")
-     * @ORM\JoinColumn(name="abonnement_id",referencedColumnName="id")
-     */
-    private $abonnement;
-
-
-    /**
      * Get id
      *
      * @return int
@@ -145,6 +109,13 @@ class Agence
         return $this->id;
     }
 
+    /**
+     * Set idAgence
+     *
+     * @param integer $idAgence
+     *
+     * @return Agence
+     */
 
 
     /**
@@ -420,163 +391,5 @@ class Agence
     {
         return $this->score;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->vehicules = new ArrayCollection();
-        $this->ads = new ArrayCollection();
-        $this->pointsLocation = new ArrayCollection();
-    }
-
-    /**
-     * Add vehicule
-     *
-     * @param \DispoCar\ParcAutoBundle\Entity\Vehicule $vehicule
-     *
-     * @return Agence
-     */
-    public function addVehicule(Vehicule $vehicule)
-    {
-        $this->vehicules[] = $vehicule;
-
-        return $this;
-    }
-
-    /**
-     * Remove vehicule
-     *
-     * @param \DispoCar\ParcAutoBundle\Entity\Vehicule $vehicule
-     */
-    public function removeVehicule(Vehicule $vehicule)
-    {
-        $this->vehicules->removeElement($vehicule);
-    }
-
-    /**
-     * Get vehicules
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getVehicules()
-    {
-        return $this->vehicules;
-    }
-
-    /**
-     * Add ad
-     *
-     * @param \DispoCar\AgenceBundle\Entity\Ads $ad
-     *
-     * @return Agence
-     */
-    public function addAd(Ads $ad)
-    {
-        $this->ads[] = $ad;
-
-        return $this;
-    }
-
-    /**
-     * Remove ad
-     *
-     * @param \DispoCar\AgenceBundle\Entity\Ads $ad
-     */
-    public function removeAd(Ads $ad)
-    {
-        $this->ads->removeElement($ad);
-    }
-
-    /**
-     * Get ads
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getAds()
-    {
-        return $this->ads;
-    }
-
-    /**
-     * Set presentation
-     *
-     * @param \DispoCar\AgenceBundle\Entity\Presentation $presentation
-     *
-     * @return Agence
-     */
-    public function setPresentation(Presentation $presentation = null)
-    {
-        $this->presentation = $presentation;
-
-        return $this;
-    }
-
-    /**
-     * Get presentation
-     *
-     * @return \DispoCar\AgenceBundle\Entity\Presentation
-     */
-    public function getPresentation()
-    {
-        return $this->presentation;
-    }
-
-    /**
-     * Add pointsLocation
-     *
-     * @param \DispoCar\AgenceBundle\Entity\PointLocation $pointsLocation
-     *
-     * @return Agence
-     */
-    public function addPointsLocation(PointLocation $pointsLocation)
-    {
-        $this->pointsLocation[] = $pointsLocation;
-
-        return $this;
-    }
-
-    /**
-     * Remove pointsLocation
-     *
-     * @param \DispoCar\AgenceBundle\Entity\PointLocation $pointsLocation
-     */
-    public function removePointsLocation(PointLocation $pointsLocation)
-    {
-        $this->pointsLocation->removeElement($pointsLocation);
-    }
-
-    /**
-     * Get pointsLocation
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getPointsLocation()
-    {
-        return $this->pointsLocation;
-    }
-
-    /**
-     * Set abonnement
-     *
-     * @param \DispoCar\AbonnementBundle\Entity\Abonnement $abonnement
-     *
-     * @return Agence
-     */
-    public function setAbonnement(\DispoCar\AbonnementBundle\Entity\Abonnement $abonnement = null)
-    {
-        $this->abonnement = $abonnement;
-
-        return $this;
-    }
-
-    /**
-     * Get abonnement
-     *
-     * @return \DispoCar\AbonnementBundle\Entity\Abonnement
-     */
-    public function getAbonnement()
-    {
-        return $this->abonnement;
-    }
 }
+

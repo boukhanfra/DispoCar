@@ -1,0 +1,140 @@
+{% extends 'IndexBundle:common:base.html.twig' %}
+{% block contenu %}
+
+
+    <div class="row" >
+     <div class="col-md-3"  style="margin-top: -25px;">
+<ul class="breadcrumb" style="margin: 4px;"><li><a href="#">Accueil</a></li> <li class="active">Recherche de voiture</li></ul>
+    </div>
+        <div class="col-md-12 RechercherCar">
+        <div class="jumbotron" style="padding: 8px;margin:2px">
+            <form class="form">
+                <fieldset>
+        <div class="form-group" >
+              <label class="col-md-2 control-label"  for="focusedInput"> Date/Heure location</label>
+              <div class="col-md-1" style="padding: 1px"> <input class="form-control" id="focusedInput" value="" type="text"></div>
+            <div class="col-md-1">  <input class="form-control" id="focusedInput" value="" type="text"></div>
+
+              <label class="col-md-2 control-label" for="focusedInput">Date/Heure restitution</label>
+              <div class="col-md-1" style="padding: 1px"> <input class="form-control" id="focusedInput" value="" type="text"></div>
+            <div class="col-md-1">  <input class="form-control" id="focusedInput" value="" type="text"></div>
+
+          <label class="control-label col-md-1" for="focusedInput">Ville/Lieu</label>
+            <div class="col-md-1">  <input class="form-control" id="focusedInput" value="" type="text"></div>
+            <button type="submit" class=" col-md-2 btn btn-primary">Recherchez</button>
+
+        </div>
+                  </fieldset>
+                </form>
+            </div>
+        </div>
+
+<div class="col-md-3">
+ <div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title" style="text-align: center"> Filtre de recherche</h3>
+  </div>
+  <div class="panel-body">
+
+          <div class="form-group">
+          <span class="grasform">Type de carburant</span>
+                 <div class="checkbox">
+                      <label><input type="checkbox" checked> Diesel</label>
+                      <label><input type="checkbox" checked> Essence</label>
+                  </div>
+          </div>
+
+          <div class="form-group">
+           <span class="grasform">Prix</span>
+        <div class="radio">
+          <label>
+            <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+            Le moins cher
+          </label>
+             <label>
+            <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+            Le plus cher
+          </label>
+        </div>
+           </div>
+
+          <div class="form-group">
+          <span class="grasform">Marque</span>
+                 <div class="checkbox">
+                      <label class="col-md-5"><input type="checkbox" > Toyota</label>
+                      <label class="col-md-5"><input type="checkbox" > Ford</label>
+                      <label class="col-md-5"><input type="checkbox" > Hyundai</label>
+                      <label class="col-md-5"><input type="checkbox" > Nissan</label>
+                      <label class="col-md-5"><input type="checkbox" > Opel</label>
+                      <label class="col-md-5"><input type="checkbox" > Mercedes</label>
+                 </div>
+          </div>
+      <div class="col-md-12" style="min-height: 10px"> </div>
+            <div class="form-group">
+          <span class="grasform">Catégorie</span>
+                 <div class="checkbox">
+                      <label class="col-md-5"><input type="checkbox" > Standard</label>
+                      <label class="col-md-5"><input type="checkbox" > Citadine</label>
+                      <label class="col-md-5"><input type="checkbox" > 4*4</label>
+                      <label class="col-md-5"><input type="checkbox" > Monospace</label>
+                      <label class="col-md-5"><input type="checkbox" > Economique</label>
+                      <label class="col-md-5"><input type="checkbox" > Luxe</label>
+                 </div>
+          </div>
+
+      <div class="col-md-12" style="min-height: 10px"> </div>
+
+            <div class="form-group">
+          <span class="grasform">Options</span>
+                 <div class="checkbox">
+                      <label class="col-md-6"><input type="checkbox"> Climatisation</label>
+                      <label class="col-md-6"><input type="checkbox"> Siége Enfant</label>
+                      <label class="col-md-6"><input type="checkbox"> GPS</label>
+                      <label class="col-md-6"><input type="checkbox"> Automatique</label>
+                 </div>
+            </div>
+
+  </div>
+</div>
+</div>
+
+   <div class="col-md-9" >
+       <div class="col-md-12" style="padding:0;" >
+          <div class="panel panel-default">
+            <div class="panel-body">
+    <span class="grascolor">60 voitures de loaction correspondantes à votre recherche...</span>
+            </div>
+        </div>
+       </div>
+
+        <div class="col-md-12 panel panel-standard" >
+  <div class="col-md-12"> <span class="grasform">Dacia logan 2016</span> <span class="smallGray">ou équivalant</span></div>
+  <div class="col-md-3"> <img src="{{ asset('bundles/index/images/logan.jpg') }}" class="img-responsive" width="200" title="logan"/> </div>
+  <div class="col-md-3">    <br/>Essense <br/>Non Climatisé<br/> Manuel </div>
+  <div class="col-md-3"> <b>Agence Rangtour</b><br> Hay Riad sect 15 bloc N<br>05 37 90 87 32 </div>
+  <div class="col-md-3"><div class="price-panel">
+                       <span class="price">31 €/Jour</span><br/> Total: 90 € <br/><br/>
+                       <button type="submit" class="btn btn-primary btn-lg col-md-12">Reservez</button>
+                        </div> </div>
+        </div>
+
+       <div class="col-md-12 panel panel-standard" >
+  <div class="col-md-12"> <span class="grasform">Renault Clio 2015</span> <span class="smallGray">ou équivalant</span></div>
+  <div class="col-md-3"> <img src="{{ asset('bundles/index/images/clio.jpg') }}" class="img-responsive" width="200" title="logan"/> </div>
+  <div class="col-md-3">    <br/>Essense <br/>Non Climatisé<br/> Manuel </div>
+  <div class="col-md-3"> <b>Agence Rabat Car Tour</b><br> Hay Riad sect 15 bloc N<br>05 37 90 87 32 </div>
+  <div class="col-md-3"><div class="price-panel">
+                       <span class="price">53 €/Jour</span><br/> Total: 112 € <br/><br/>
+                       <button type="submit" class="btn btn-primary btn-lg col-md-12">Reservez</button>
+                        </div> </div>
+        </div>
+
+
+     </div>
+
+
+
+        </div>
+    </div>
+
+  {% endblock %}

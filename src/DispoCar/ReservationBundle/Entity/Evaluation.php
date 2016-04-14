@@ -51,9 +51,6 @@ class Evaluation
     private $commentaireAgence;
 
 
-    private $reservation;
-
-
     /**
      * Get id
      *
@@ -160,3 +157,4 @@ class Evaluation
         return $this->commentaireAgence;
     }
 }
+

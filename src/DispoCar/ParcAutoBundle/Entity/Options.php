@@ -126,3 +126,4 @@ class Options
         return $this->siegeBB;
     }
 }
+
