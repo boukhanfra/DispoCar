@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new DispoCar\ReservationBundle\ReservationBundle(),
             new DispoCar\AbonnementBundle\AbonnementBundle(),
             new DispoCar\IndexBundle\IndexBundle(),
+            new DispoCar\UtilisateurBundle\UtilisateurBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
