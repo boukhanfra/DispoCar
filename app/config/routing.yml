@@ -1,24 +1,19 @@
-utilisateur:
-    resource: "@UtilisateurBundle/Controller/"
-    type:     annotation
-    prefix:   /
-
 index:
     resource: "@IndexBundle/Resources/config/routing.yml"
     prefix:   /
 
 abonnement:
     resource: "@AbonnementBundle/Resources/config/routing.yml"
-    prefix:   /abonnement
+    prefix:   /
 
 reservation:
     resource: "@ReservationBundle/Resources/config/routing.yml"
-    prefix:   /reservation
+    prefix:   /
 
 agence:
     resource: "@AgenceBundle/Resources/config/routing.yml"
-    prefix:   /agence
+    prefix:   /
 
 parc_auto:
     resource: "@ParcAutoBundle/Resources/config/routing.yml"
-    prefix:   /parcauto
+    prefix:   /

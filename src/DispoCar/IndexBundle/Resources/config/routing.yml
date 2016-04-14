@@ -3,4 +3,4 @@ agence_index:
     defaults: { _controller: IndexBundle:Index:index }
 agence_search:
     path:     /search
-    defaults: { _controller: IndexBundle:Default:search }
+    defaults: { _controller: IndexBundle:Index:search }
