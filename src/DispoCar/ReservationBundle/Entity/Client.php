@@ -2,6 +2,7 @@
 
 namespace DispoCar\ReservationBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -156,7 +157,7 @@ class Client
      */
     public function __construct()
     {
-        $this->reservations = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->reservations = new ArrayCollection();
     }
 
     /**
@@ -214,7 +215,7 @@ class Client
      *
      * @return Client
      */
-    public function addReservation(\DispoCar\ReservationBundle\Entity\Reservation $reservation)
+    public function addReservation(Reservation $reservation)
     {
         $this->reservations[] = $reservation;
 
@@ -226,7 +227,7 @@ class Client
      *
      * @param \DispoCar\ReservationBundle\Entity\Reservation $reservation
      */
-    public function removeReservation(\DispoCar\ReservationBundle\Entity\Reservation $reservation)
+    public function removeReservation(Reservation $reservation)
     {
         $this->reservations->removeElement($reservation);
     }
