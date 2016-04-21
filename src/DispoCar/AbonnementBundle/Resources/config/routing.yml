@@ -1,3 +1,0 @@
-abonnement_homepage:
-    path:     /
-    defaults: { _controller: AbonnementBundle:Default:index }
