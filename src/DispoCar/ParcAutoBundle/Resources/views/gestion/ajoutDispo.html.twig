@@ -5,7 +5,7 @@
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Rangtour</a></li>
-                    <li class="active">Gestion des prix</li>
+                    <li class="active">Gestion des disponibilité</li>
                 </ul>
             </div>
             <div  class="col-md-2 col-md-offset-5"> <img src="{{ asset('bundles/agence/images/rangtourlogo.png') }}" style="border-radius: 20px;width: 190px" alt="BookingCar" class="img-responsive" title="BookingCar.ma"/></div>
@@ -17,49 +17,38 @@
                 <thead>
                 <tr>
                     <th>Véhicule</th>
-                    <th>Courte durée  (DH/J)</th>
-                    <th>Moyenne durée (DH/J)</th>
-                    <th>Longue durée  (DH/J)</th>
+                    <th>Disponible</th>
+                    <th>Période d'indisponibilités</th>
+                    <th>Date début (indisponibilité)</th>
+                    <th>Date fin (indisponibilité)</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <td>Ford Fiesta Ess</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="250"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="250"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="250"></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                        <button type="reset" class="btn btn-default">Rénitialiser</button></td>
+                    <td><label><input type="checkbox"></label></td>
+                    <td>18-06-2016 -> 22-07-2016 <br> 28-07-2016 -> 02-08-2016 </td>
+                    <td><input type="text" id="datepicker"/> </td>
+                    <td>12/04/2016</td>
+                    <td><button type="submit" class="btn btn-primary">Rajouter</button></td>
                 </tr>
                 <tr>
-                    <td>Opel Astra Diesel</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="350"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="320"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="300 "></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                    <button type="reset" class="btn btn-default">Rénitialiser</button></td>
-                </tr>
-                <tr>
-                    <td>Seat Ibiza Diesel</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="360"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="320"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="300 "></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                        <button type="reset" class="btn btn-default">Rénitialiser</button></td>
-                </tr>
-                <tr>
-                    <td>Renault CLio</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="270"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="220"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="200 "></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                        <button type="reset" class="btn btn-default">Rénitialiser</button></td>
-                </tr>
+                    <td>Clio campus Diesel</td>
+                    <td><label><input type="checkbox"></label></td>
+                    <td> Néant </td>
+                    <td>calendrier</td>
+                    <td>calendrier</td>
 
-
+                    <td><button type="submit" class="btn btn-primary">Rajouter</button></td>
+                </tr>
                 </tbody>
             </table>
             </div>
         </div>
   {% endblock %}
+
+  {% block javascript %}
+
+
+  {%  endblock %}

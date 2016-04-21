@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return $this->render('ReservationBundle:Default:index.html.twig');
     }
+    public function gesReservationAction()
+    {
+        return $this->render('ReservationBundle:gestion:gesReservation.html.twig');
+    }
 }

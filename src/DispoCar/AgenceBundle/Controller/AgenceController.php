@@ -11,8 +11,5 @@ class AgenceController extends Controller
         return $this->render('AgenceBundle:agence.html.twig');
     }
 
-    public function ajoutVehiculeAction()
-    {
-        return $this->render('AgenceBundle:gestion:ajoutVehicule.html.twig');
-    }
+
 }

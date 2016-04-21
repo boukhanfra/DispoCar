@@ -5,7 +5,7 @@
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Rangtour</a></li>
-                    <li class="active">Gestion des prix</li>
+                    <li class="active">Gestion des reservations</li>
                 </ul>
             </div>
             <div  class="col-md-2 col-md-offset-5"> <img src="{{ asset('bundles/agence/images/rangtourlogo.png') }}" style="border-radius: 20px;width: 190px" alt="BookingCar" class="img-responsive" title="BookingCar.ma"/></div>
@@ -16,50 +16,79 @@
             <table class="table table-striped table-hover ">
                 <thead>
                 <tr>
+                    <th>Nom </th>
                     <th>Véhicule</th>
-                    <th>Courte durée  (DH/J)</th>
-                    <th>Moyenne durée (DH/J)</th>
-                    <th>Longue durée  (DH/J)</th>
+                    <th>Carburant</th>
+                    <th>Options</th>
+                    <th>Date départ </th>
+                    <th>Date retour</th>
+                    <th>Durée </th>
+                    <th>Prix Total</th>
+                    <th>Avance</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <td>Ford Fiesta Ess</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="250"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="250"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="250"></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                        <button type="reset" class="btn btn-default">Rénitialiser</button></td>
+                    <td>Hamid AlAOUI</td>
+                    <td>Ford Fiesta</td>
+                    <td>Diesel</td>
+                    <td>Automatique</td>
+                    <td>12/05/2016</td>
+                    <td>20/05/2016</td>
+                    <td>8 jours</td>
+                    <td>590 euro</td>
+                    <td>25%</td>
+                    <td><input type="checkbox"> Traité
+                        <input type="checkbox"> Cloturé
+                        <button type="submit" class="btn btn-default">Message</button></td>
                 </tr>
                 <tr>
-                    <td>Opel Astra Diesel</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="350"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="320"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="300 "></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                    <button type="reset" class="btn btn-default">Rénitialiser</button></td>
+                    <td>Jamal BOUZAYED</td>
+                    <td>Seat Ibiza</td>
+                    <td>Diesel</td>
+                    <td>Siege enfant , GPS</td>
+                    <td>15/05/2016</td>
+                    <td>25/05/2016</td>
+                    <td>10 jours</td>
+                    <td>990 euro</td>
+                    <td>25%</td>
+                    <td><input type="checkbox"> Traité
+                        <input type="checkbox"> Cloturé
+                        <button type="submit" class="btn btn-default">Message</button></td>
                 </tr>
-                <tr>
-                    <td>Seat Ibiza Diesel</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="360"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="320"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="300 "></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                        <button type="reset" class="btn btn-default">Rénitialiser</button></td>
+                <tr class="info">
+                    <td>Nabil DAHMANI</td>
+                    <td>Ford Fiesta</td>
+                    <td>Diesel</td>
+                    <td>Automatique</td>
+                    <td>14/05/2016</td>
+                    <td>21/05/2016</td>
+                    <td>7 jours</td>
+                    <td>900 euro</td>
+                    <td>25%</td>
+                    <td><input type="checkbox"> Traité
+                        <input type="checkbox"> Cloturé
+                        <button type="submit" class="btn btn-default">Message</button></td>
                 </tr>
-                <tr>
-                    <td>Renault CLio</td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="270"></td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="220"> </td>
-                    <td><input class="form-control" id="inputWarning" type="text" value="200 "></td>
-                    <td><button type="submit" class="btn btn-primary">Valider</button>
-                        <button type="reset" class="btn btn-default">Rénitialiser</button></td>
+                <tr class="warning">
+                    <td>Jalal BENBRAHIM</td>
+                    <td>Hyundai Accent</td>
+                    <td>Essence</td>
+                    <td> GPS</td>
+                    <td>16/05/2016</td>
+                    <td>22/05/2016</td>
+                    <td>6 jours</td>
+                    <td>790 euro</td>
+                    <td>100%</td>
+                    <td><input type="checkbox"> Traité
+                        <input type="checkbox"> Cloturé
+                        <button type="button" class="btn btn-default" data-toggle="popover" data-placement="left" title="Envoyer un message"  data-content="entrer somthing">Message</button>
+                    </td>
                 </tr>
-
-
                 </tbody>
             </table>
             </div>
         </div>
+
   {% endblock %}
