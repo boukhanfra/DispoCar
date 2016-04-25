@@ -1,3 +1,0 @@
-agence_index:
-    path:     /
-    defaults: { _controller: IndexBundle:Default:index }

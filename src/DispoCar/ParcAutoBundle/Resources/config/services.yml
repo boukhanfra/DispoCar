@@ -1,4 +1,0 @@
-services:
-#    parc_auto.example:
-#        class: parcAutoBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]
