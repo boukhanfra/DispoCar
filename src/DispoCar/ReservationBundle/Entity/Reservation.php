@@ -3,6 +3,7 @@
 namespace DispoCar\ReservationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use DispoCar\ParcAutoBundle\Entity\Vehicule;
 
 /**
  * Reservation
@@ -72,6 +73,28 @@ class Reservation
      */
     private $conclu;
 
+
+    /**
+     * @var Evaluation
+     * @ORM\OneToOne(targetEntity="DispoCar\ReservationBundle\Entity\Evaluation")
+     * @ORM\JoinColumn(name="evaluation_id",referencedColumnName="id")
+     */
+    private $evaluation;
+
+
+    /**
+     * @var Client
+     * @ORM\ManyToOne(targetEntity="DispoCar\ReservationBundle\Entity\Client",inversedBy="reservations")
+     * @ORM\JoinColumn(name="client_id",referencedColumnName="id")
+     */
+    private $client;
+
+    /**
+     * @var Vehicule
+     * @ORM\ManyToOne(targetEntity="DispoCar\ParcAutoBundle\Entity\Vehicule",inversedBy="reservations")
+     * @ORM\JoinColumn(name="vehicule_id",referencedColumnName="id")
+     */
+    private $vehicule;
 
     /**
      * Get id
@@ -250,5 +273,76 @@ class Reservation
     {
         return $this->conclu;
     }
-}
 
+    /**
+     * Set evaluation
+     *
+     * @param \DispoCar\ReservationBundle\Entity\Evaluation $evaluation
+     *
+     * @return Reservation
+     */
+    public function setEvaluation(\DispoCar\ReservationBundle\Entity\Evaluation $evaluation = null)
+    {
+        $this->evaluation = $evaluation;
+
+        return $this;
+    }
+
+    /**
+     * Get evaluation
+     *
+     * @return \DispoCar\ReservationBundle\Entity\Evaluation
+     */
+    public function getEvaluation()
+    {
+        return $this->evaluation;
+    }
+
+    /**
+     * Set client
+     *
+     * @param \DispoCar\ReservationBundle\Entity\Client $client
+     *
+     * @return Reservation
+     */
+    public function setClient(\DispoCar\ReservationBundle\Entity\Client $client = null)
+    {
+        $this->client = $client;
+
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \DispoCar\ReservationBundle\Entity\Client
+     */
+    public function getClient()
+    {
+        return $this->client;
+    }
+
+    /**
+     * Set vehicule
+     *
+     * @param \DispoCar\ParcAutoBundle\Entity\Vehicule $vehicule
+     *
+     * @return Reservation
+     */
+    public function setVehicule(\DispoCar\ParcAutoBundle\Entity\Vehicule $vehicule = null)
+    {
+        $this->vehicule = $vehicule;
+
+        return $this;
+    }
+
+    /**
+     * Get vehicule
+     *
+     * @return \DispoCar\ParcAutoBundle\Entity\Vehicule
+     */
+    public function getVehicule()
+    {
+        return $this->vehicule;
+    }
+}

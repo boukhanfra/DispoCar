@@ -51,10 +51,6 @@ class Evaluation
     private $commentaireAgence;
 
 
-    /**
-     * @var Reservation
-     * @ORM\OneToOne(targetEntity="DispoCar\ReservationBundle\Entity\Reservation",mappedBy="evaluation")
-     */
     private $reservation;
 
 
@@ -164,4 +160,3 @@ class Evaluation
         return $this->commentaireAgence;
     }
 }
-

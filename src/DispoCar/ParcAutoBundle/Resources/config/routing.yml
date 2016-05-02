@@ -1,3 +1,13 @@
 parc_auto_homepage:
     path:     /
     defaults: { _controller: ParcAutoBundle:Default:index }
+parc_ajout_vehicule:
+    path:     /ajoutVehicule
+    defaults: { _controller: ParcAutoBundle:Default:ajoutVehicule }
+parc_ajout_prix:
+    path:     /ajoutPrix
+    defaults: { _controller: ParcAutoBundle:Default:ajoutPrix }
+parc_ajout_disponibilite:
+    path:     /ajoutDispo
+    defaults: { _controller: ParcAutoBundle:Default:ajoutDispo }
+

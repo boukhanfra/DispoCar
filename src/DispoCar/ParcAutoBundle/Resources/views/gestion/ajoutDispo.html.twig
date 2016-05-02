@@ -1,0 +1,65 @@
+{% extends 'IndexBundle:common:base.html.twig' %}
+{% block contenu %}
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Rangtour</a></li>
+                    <li class="active">Gestion des disponibilité</li>
+                </ul>
+            </div>
+            <div  class="col-md-2 col-md-offset-5"> <img src="{{ asset('bundles/agence/images/rangtourlogo.png') }}" style="border-radius: 20px;width: 190px" alt="BookingCar" class="img-responsive" title="BookingCar.ma"/></div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-11">
+            <table class="table table-striped table-hover ">
+                <thead>
+                <tr>
+                    <th>Véhicule</th>
+                    <th>Disponible</th>
+                    <th>Période d'indisponibilités</th>
+                    <th>Date début (indisponibilité)</th>
+                    <th>Date fin (indisponibilité)</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Ford Fiesta Ess</td>
+                    <td><label><input type="checkbox"></label></td>
+                    <td>18-06-2016 -> 22-07-2016 <br> 28-07-2016 -> 02-08-2016 </td>
+                    <td><input type="text" id="datepicker"/> </td>
+                    <td><input type="text" id="datepicker1"/> </td>
+                    <td><button type="submit" class="btn btn-primary">Rajouter</button></td>
+                </tr>
+                <tr>
+                    <td>Clio campus Diesel</td>
+                    <td><label><input type="checkbox"></label></td>
+                    <td> Néant </td>
+                    <td><input type="text" id="datepicker2"/> </td>
+                    <td><input type="text" id="datepicker3"/> </td>
+
+                    <td><button type="submit" class="btn btn-primary">Rajouter</button></td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+  {% endblock %}
+
+    {% block javascript %}
+        <script src="{{ asset('bundles/index/js/jquery-1.10.2.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/jquery-ui.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/custom.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/app.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/map.js') }}"></script>
+        <script>$(function() {$( "#datepicker" ).datepicker();});</script>
+        <script>$(function() {$( "#datepicker1" ).datepicker();});</script>
+        <script>$(function() {$( "#datepicker2" ).datepicker();});</script>
+        <script>$(function() {$( "#datepicker3" ).datepicker();});</script>
+
+    {% endblock %}
+

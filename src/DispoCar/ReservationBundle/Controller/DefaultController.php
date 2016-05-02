@@ -6,8 +6,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class DefaultController extends Controller
 {
-    public function indexAction()
+
+    public function gesReservationAction()
     {
-        return $this->render('ReservationBundle:Default:index.html.twig');
+        return $this->render('ReservationBundle:gestion:gesReservation.html.twig');
     }
 }

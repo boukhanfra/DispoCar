@@ -1,6 +1,6 @@
 <?php
 
-namespace DispoCar\ReservationBundle\Entity;
+namespace ReservationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Nondispo
  *
  * @ORM\Table(name="nondispo")
- * @ORM\Entity(repositoryClass="DispoCar\ReservationBundle\Repository\NondispoRepository")
+ * @ORM\Entity(repositoryClass="ReservationBundle\Repository\NondispoRepository")
  */
 class Nondispo
 {
@@ -51,6 +51,30 @@ class Nondispo
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set idNondispo
+     *
+     * @param integer $idNondispo
+     *
+     * @return Nondispo
+     */
+    public function setIdNondispo($idNondispo)
+    {
+        $this->idNondispo = $idNondispo;
+
+        return $this;
+    }
+
+    /**
+     * Get idNondispo
+     *
+     * @return int
+     */
+    public function getIdNondispo()
+    {
+        return $this->idNondispo;
     }
 
     /**

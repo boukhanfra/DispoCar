@@ -8,11 +8,8 @@ class AgenceController extends Controller
 {
     public function agenceAction()
     {
-        return $this->render('AgenceBundle:agence.html.twig');
+        return $this->render('AgenceBundle:Default:agence.html.twig');
     }
 
-    public function ajoutVehiculeAction()
-    {
-        return $this->render('AgenceBundle:gestion:ajoutVehicule.html.twig');
-    }
+
 }

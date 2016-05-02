@@ -64,4 +64,3 @@ class Marque
         return $this->nom;
     }
 }
-

@@ -12,11 +12,11 @@
                 <fieldset>
         <div class="form-group" >
               <label class="col-md-2 control-label"  for="focusedInput"> Date/Heure location</label>
-              <div class="col-md-1" style="padding: 1px"> <input class="form-control" id="focusedInput" value="" type="text"></div>
+              <div class="col-md-1" style="padding: 1px"> <input class="form-control" id="datedebut" value="" type="text"></div>
             <div class="col-md-1">  <input class="form-control" id="focusedInput" value="" type="text"></div>
 
               <label class="col-md-2 control-label" for="focusedInput">Date/Heure restitution</label>
-              <div class="col-md-1" style="padding: 1px"> <input class="form-control" id="focusedInput" value="" type="text"></div>
+              <div class="col-md-1" style="padding: 1px"> <input class="form-control" id="datefin" value="" type="text"></div>
             <div class="col-md-1">  <input class="form-control" id="focusedInput" value="" type="text"></div>
 
           <label class="control-label col-md-1" for="focusedInput">Ville/Lieu</label>
@@ -138,3 +138,15 @@
     </div>
 
   {% endblock %}
+    {% block javascript %}
+        <script src="{{ asset('bundles/index/js/jquery-1.10.2.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/jquery-ui.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/custom.min.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/app.js') }}"></script>
+        <script src="{{ asset('bundles/index/js/map.js') }}"></script>
+        <script>$(function() {$( "#datedebut" ).datepicker();});</script>
+        <script>$(function() {$( "#datefin" ).datepicker();});</script>
+
+    {% endblock %}

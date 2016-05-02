@@ -51,6 +51,13 @@ class PointLocation
      */
     private $repere;
 
+    /**
+     * @var Agence
+     * @ORM\ManyToOne(targetEntity="DispoCar\AgenceBundle\Entity\Agence",inversedBy="pointsLocation")
+     * @ORM\JoinColumn(name="agence_id",referencedColumnName="id")
+     */
+    private $agence;
+
 
     /**
      * Get id
@@ -168,5 +175,28 @@ class PointLocation
     {
         return $this->repere;
     }
-}
 
+    /**
+     * Set agence
+     *
+     * @param \DispoCar\AgenceBundle\Entity\Agence $agence
+     *
+     * @return PointLocation
+     */
+    public function setAgence(\DispoCar\AgenceBundle\Entity\Agence $agence = null)
+    {
+        $this->agence = $agence;
+
+        return $this;
+    }
+
+    /**
+     * Get agence
+     *
+     * @return \DispoCar\AgenceBundle\Entity\Agence
+     */
+    public function getAgence()
+    {
+        return $this->agence;
+    }
+}

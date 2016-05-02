@@ -15,8 +15,9 @@ class Privilege
 
     /**
      * @var int
-     *
-     * @ORM\Column(name="idPrivilege", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\Column(name="id", type="integer")
      */
     private $id;
 
@@ -37,23 +38,4 @@ class Privilege
         return $this->id;
     }
 
-
-    /**
-     * Get idPrivilege
-     *
-     * @return int
-     */
-    public function getIdPrivilege()
-    {
-        return $this->id;
-    }
-	public function getPrivilege() {
-		return $this->privilege;
-	}
-	public function setPrivilege($privilege) {
-		$this->privilege = $privilege;
-		return $this;
-	}
-	
 }
-
