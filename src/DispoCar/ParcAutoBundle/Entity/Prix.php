@@ -155,4 +155,12 @@ class Prix
     {
         return $this->tresLongueDuree;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->courteDuree();
+    }
 }

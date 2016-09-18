@@ -63,4 +63,12 @@ class Carburant
     {
         return $this->type;
     }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return $this->type;
+    }
 }

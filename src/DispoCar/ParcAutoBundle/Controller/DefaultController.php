@@ -2,7 +2,10 @@
 
 namespace DispoCar\ParcAutoBundle\Controller;
 
+use DispoCar\ParcAutoBundle\Entity\Vehicule;
+use DispoCar\ParcAutoBundle\Form\Type\AddVehiculeType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -10,10 +13,25 @@ class DefaultController extends Controller
     {
         return $this->render('ParcAutoBundle:Default:index.html.twig');
     }
-    public function ajoutVehiculeAction()
+
+
+    public function ajoutVehiculeAction(Request $request)
     {
-        return $this->render('ParcAutoBundle:gestion:ajoutVehicule.html.twig');
+        $vehicule=new Vehicule();
+        $form = $this->createForm(AddVehiculeType::class,$vehicule);
+        $form->handleRequest($request);
+
+        if($form->isValid())
+        {
+echo "hiiii";
+        }
+
+        return $this->render('ParcAutoBundle:gestion:ajoutVehicule.html.twig', array('form'=>$form->createView()
+        ));
+
+
     }
+
     public function ajoutPrixAction()
     {
         return $this->render('ParcAutoBundle:gestion:ajoutPrix.html.twig');

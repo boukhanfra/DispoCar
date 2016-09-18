@@ -21,7 +21,56 @@ class Options
      */
     private $id;
 
-  
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="climatisation", type="boolean", nullable=true)
+     */
+    private $climatisation;
+
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="gps", type="boolean", nullable=true)
+     */
+    private $gps;
+
+    /**
+     * @return boolean
+     */
+    public function isGps()
+    {
+        return $this->gps;
+    }
+
+    /**
+     * @param boolean $gps
+     */
+    public function setGps($gps)
+    {
+        $this->gps = $gps;
+    }
+
+
+    /**
+     * @return boolean
+     */
+    public function isClimatisation()
+    {
+        return $this->climatisation;
+    }
+
+    /**
+     * @param boolean $climatisation
+     */
+    public function setClimatisation($climatisation)
+    {
+        $this->climatisation = $climatisation;
+    }
+
+
+
     /**
      * @var bool
      *

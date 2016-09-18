@@ -62,4 +62,14 @@ class Categorie
     {
         return $this->categorie;
     }
+
+
+    /**
+     * @return string
+     */
+
+    public function __toString()
+    {
+        return $this->categorie;
+    }
 }

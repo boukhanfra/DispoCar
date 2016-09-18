@@ -46,12 +46,6 @@ class Vehicule
      */
     private $nbrPortes;
 
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="climatisation", type="boolean", nullable=true)
-     */
-    private $climatisation;
 
     /**
      * @var string
@@ -94,7 +88,7 @@ class Vehicule
      * @ORM\ManyToOne(targetEntity="DispoCar\ParcAutoBundle\Entity\Options")
      * @ORM\JoinColumn(name="option_id",referencedColumnName="id")
      */
-    private $option;
+    private $options;
 
     /**
      * @var Prix
@@ -102,6 +96,31 @@ class Vehicule
      * @ORM\JoinColumn(name="prix_id",referencedColumnName="id")
      */
     private $prix;
+
+
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="nombre", type="integer", nullable=false)
+     */
+    private $nombre;
+
+    /**
+     * @return int
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param int $nombre
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    }
 
 
     /**
@@ -206,29 +225,6 @@ class Vehicule
         return $this->nbrPortes;
     }
 
-    /**
-     * Set climatisation
-     *
-     * @param boolean $climatisation
-     *
-     * @return Vehicule
-     */
-    public function setClimatisation($climatisation)
-    {
-        $this->climatisation = $climatisation;
-
-        return $this;
-    }
-
-    /**
-     * Get climatisation
-     *
-     * @return bool
-     */
-    public function getClimatisation()
-    {
-        return $this->climatisation;
-    }
 
     /**
      * Set photo
@@ -365,9 +361,9 @@ class Vehicule
      *
      * @return Vehicule
      */
-    public function setOption(\DispoCar\ParcAutoBundle\Entity\Options $option = null)
+    public function setOptions(\DispoCar\ParcAutoBundle\Entity\Options $option = null)
     {
-        $this->option = $option;
+        $this->options = $option;
 
         return $this;
     }
@@ -377,9 +373,9 @@ class Vehicule
      *
      * @return \DispoCar\ParcAutoBundle\Entity\Options
      */
-    public function getOption()
+    public function getOptions()
     {
-        return $this->option;
+        return $this->options;
     }
 
     /**

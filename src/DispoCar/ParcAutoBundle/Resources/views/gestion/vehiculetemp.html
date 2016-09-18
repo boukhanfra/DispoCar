@@ -13,83 +13,84 @@
 </div>
 <div class="row">
     <div class="col-md-4">
-
-        <form class="form-horizontal" method="post" action="{% block action %} {{ path('parc_ajout_vehicule') }} {% endblock %}">
+        <form class="form-horizontal">
             <fieldset>
-
                 <legend>Ajout de véhicule</legend>
                 <div class="form-group">
                     <label for="inputEmail" class="col-md-2 control-label">Marque</label>
                     <div class="col-md-8">
-                        {{ form_widget(form.marque,{ 'attr' :{ 'class' : 'form-control'} }) }}
+                        <input class="form-control" id="inputEmail"  type="text">
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="inputEmail" class="col-md-2 control-label">Model</label>
                     <div class="col-md-8">
-                        {{ form_widget(form.model,{ 'attr' :{ 'class' : 'form-control'} }) }}
+                        <input class="form-control" id="inputEmail"  type="text">
                     </div>
                 </div>
-
                 <div class="form-group">
                     <label for="select" class="col-md-2 control-label">Catégorie</label>
                     <div class="col-md-8">
-                        {{ form_widget(form.categorie,{ 'attr' :{ 'class' : 'form-control'} })}}
+                        <select class="form-control" id="select">
+                            <option>Standard</option>
+                            <option>Economique</option>
+                            <option>Monospace</option>
+                            <option>Citadine</option>
+                            <option>4*4</option>
+                            <option>Luxe</option>
+                        </select>
                     </div>
-                 </div>
-
-
+                </div>
                 <div class="form-group">
                     <label for="inputPassword" class="col-md-2 control-label">Options</label>
                     <div class="col-md-10">
                         <div class="checkbox">
                             <label>
-                                {{ form_widget(form.options.pleinOffert) }}  Plein
+                                <input type="checkbox"> Climatisation
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                {{ form_widget(form.options.siegeBB) }} Siége Enfant
+                                <input type="checkbox"> Siége Enfant
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox">
-                                {{ form_widget(form.options.chauffeur) }} chauffeur
+                                <input type="checkbox"> GPS
                             </label>
                         </div>
                         <div class="checkbox">
                             <label>
-                                {{ form_widget(form.options.climatisation) }} Climatisation
-                            </label>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                {{ form_widget(form.options.gps) }} GPS
+                                <input type="checkbox"> Boite Automatique
                             </label>
                         </div>
                     </div>
                 </div>
-
 
                 <div class="form-group">
                     <label class="col-md-2 control-label">Carburant</label>
-                    <div class="col-md-8">
-                        {{ form_widget(form.carburant,{ 'attr' :{ 'class' : ''} }) }}
+                    <div class="col-lg-10">
+                        <div class="radio">
+                            <label>
+                                <input name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
+                                Diesel
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+                                Essence
+                            </label>
+                        </div>
                     </div>
                 </div>
-
-
-
-
                 <div class="form-group">
-                    <label  class="col-md-2 control-label">Nombre</label>
+                    <label for="inputEmail" class="col-md-2 control-label">Nombre</label>
                     <div class="col-md-8">
-                        {{ form_widget(form.nombre,{ 'attr' :{ 'class' : 'form-control'} }) }}
+                        <input class="form-control" id="inputNombre"  type="text">
                     </div>
                 </div>
-                                            {{ form_row(form._token) }}
+
                 <div class="form-group">
                     <div class="col-md-10 col-md-offset-2">
                         <button type="reset" class="btn btn-default">Cancel</button>
@@ -101,6 +102,7 @@
     </div>
 
     <div class="col-md-8">
+
 
         <h4>Liste de véhicules</h4>
         <div class="col-md-12 panel panel-standard" >
@@ -179,5 +181,6 @@
 
 
     </div>
-
     {% endblock %}
+
+
